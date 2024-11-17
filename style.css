@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    animation: gradient 10s ease infinite;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    transition: background 0.5s ease-in-out;
+}
+
+/* Backgrounds for different weather conditions */
+body.clear {
+    background: url('images/clear-bg.gif')no-repeat center center / cover;
+}
+
+body.rain {
+    background: url('images/rain-bg.gif')no-repeat center center / cover;
+}
+
+body.cloudy {
+    background: url('images/clouds-bg.gif')no-repeat center center / cover;
+}
+
+body.snow {
+    background: url('images/snow-bg.gif')no-repeat center center / cover;
+}
+
+body.thunderstorm {
+    background: url('images/thunderstorm-bg.jpeg')no-repeat center center / cover;
+}
+
+body.drizzle {
+    background: url('images/drizzle-bg.gif')no-repeat center center / cover;
+}
+
+body.smoke {
+    background: url('images/smoke-bg.jpeg')no-repeat center center / cover;
+}
+
+body.haze {
+    background: url('images/haze-bg.jpeg')no-repeat center center / cover;
+}
+
+/* Optional gradient animation for smoother background transition */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.search button img {
+    width: 20px;
+}
+
+#location-btn {
+    margin-top: 20px;
+    background-color: #00feba;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#location-btn:hover {
+    background-color: #5b548a;
+}
+
+.weather-icon {
+    width: 170px;
+    margin-top: 30px;
+}
+
+.weather h1 {
+    font-size: 80px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.weather h2 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.humidity, .wind {
+    font-size: 28px;
+    margin-top: -6px;
+}
+
+.weather {
+    display: none;
+}
+
+.error {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
